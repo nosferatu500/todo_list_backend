@@ -4,11 +4,10 @@
     - Creation timestamp
     - Text
     - Status
-- [ ] Sort by asc/desc
 - [x] CRUD:
     - Create
     - Update
     - Delete
-- [ ] Store all data in persistent storage
-- [ ] RESTful/gRPC/GraphQL
+- [x] Store all data in persistent storage
+- [x] RESTful/gRPC/GraphQL
 - [ ] Publish (GitHub)

@@ -3,11 +3,7 @@ import { model, Schema } from "mongoose"
 
 const todoSchema: Schema = new Schema(
     {
-        name: {
-            type: String,
-            required: true,
-        },
-        description: {
+        text: {
             type: String,
             required: true,
         },
