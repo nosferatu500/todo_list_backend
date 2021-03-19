@@ -1,11 +1,11 @@
 # TODO:
 
-- [ ] List of items including:
+- [x] List of items including:
     - Creation timestamp
     - Text
     - Status
 - [ ] Sort by asc/desc
-- [ ] CRUD:
+- [x] CRUD:
     - Create
     - Update
     - Delete
