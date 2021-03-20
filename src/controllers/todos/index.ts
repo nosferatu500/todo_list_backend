@@ -5,9 +5,9 @@ import Todo from "./../../models/todo"
 const getTodos = async (req: Request, res: Response): Promise<void> => {
     try {
         const todos: ITodo[] = await Todo.find()
-        res.status(200).json({ todos }) 
+        res.status(200).json({ todos })
     } catch (error) {
-        throw error
+        res.status(500).send({ error })
     }
 }
 
@@ -25,7 +25,7 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
 
         res.status(201).json({message: "Todo added", todo: newTodo, todos: allTodos })
     } catch (error) {
-        throw error
+        res.status(500).send({ error })
     }
 }
 
@@ -42,7 +42,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json({message: "Todo updated", todo: updateTodo, todos: allTodos })
     } catch (error) {
-        throw error
+        res.status(500).send({ error })
     }
 }
 
@@ -54,7 +54,7 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json({message: "Todo deleted", todo: deleteTodo, todos: allTodos })
     } catch (error) {
-         throw error;
+        res.status(500).send({ error })
     }
 }
 
